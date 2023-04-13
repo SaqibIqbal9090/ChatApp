@@ -1,0 +1,88 @@
+mat-sidenav-container{
+   
+    height: calc(100vh - 20px);
+    background-color: white;
+}
+mat-sidenav{
+    margin: 16px;
+    width: 30%;
+    border-right: none;
+    background:rgb(229, 223, 223);
+    color: white;
+    height: 93vh;
+}
+.upper{
+    position: relative;
+    width: 100%;
+    height: 60px;
+     color: black;
+    display: flex;
+    justify-content: space-between;
+    background-color:rgb(64, 63, 63);
+    text-align: center;
+    align-items: center;
+    .profile{
+        width: 35px;
+        height: 50px;
+        position: relative;
+        padding-left: 16px;
+        color: white;
+        border-radius: 50%;
+        margin-left: 5px;
+        background-image: url('../../../assets/GTA_5_Men_Trevor_Philips_Formal_shirt_518191_1280x720.jpg');
+        background-size: cover;
+        align-content: center;
+        justify-content: center;
+        img{
+            position: absolute;
+            overflow: hidden;
+            width: 40px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    .menu{
+        color: white;
+        padding-left: 5px;
+    }
+}
+mat-sidenav-content{
+    margin: 16px;
+    margin-left: 40px;
+    width: 65%;
+    border-right: none;
+    background:rgb(82, 80, 80);
+    color: white;
+    height: 93vh;
+}
+.header{
+     position: relative;
+    width: 100%;
+    height: 60px;
+     color: rgb(250, 245, 245);
+    display: flex;
+    justify-content: space-between;
+    background-color:rgb(64, 63, 63);
+    text-align: center;
+    align-items: center;
+
+}
+.msgbox{
+    position: relative;
+    width: 90%;
+    height: 70vh;
+    background:  rgb(250, 245, 245) ;
+    border-radius: 10px;
+    margin: 20px;
+    left:40px;
+}
+.footer{
+    position: relative;
+    width: 90%;
+    height: 7vh;
+    background:  rgb(250, 245, 245) ;
+    border-radius: 20px;
+    margin: 20px;
+    left:40px;
+
+}
