@@ -1,1 +1,21 @@
-<app-home></app-home>
+<mat-toolbar>
+  My App
+  <ng-container *ngIf="authservice.currentUser$ | async as user; else loginButton" >
+    <button mat-button routerLink="login" (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      Logout
+    </button>
+  </ng-container>
+
+  <ng-template  #loginButton>
+         
+    <button mat-button routerLink="login">
+      <mat-icon>login</mat-icon>
+         Login
+    </button>
+  </ng-template>
+
+</mat-toolbar>
+<div class="content">
+<router-outlet></router-outlet>
+</div>

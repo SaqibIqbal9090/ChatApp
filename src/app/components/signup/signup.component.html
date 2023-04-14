@@ -1,1 +1,32 @@
-<p>signup works!</p>
+<div class="form-container">
+    <h1>Login</h1>
+    <form [formGroup]="signupform" (ngSubmit)="submitSignup()" >
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input type="text" matInput placeholder="Ex. peter" formControlName="name" />
+            <mat-error *ngIf="email?.errors?.['required']">Nmae required</mat-error>
+          </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input type="text" matInput placeholder="Ex. pat@example.com" formControlName="email" />
+        <mat-error *ngIf="email?.errors?.['required']">Email required</mat-error>
+        <mat-error *ngIf="email?.errors?.['email']">Invalid Email</mat-error>
+      </mat-form-field>
+      <mat-form-field >
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="password" formControlName="password" />
+        <mat-error *ngIf="password?.errors?.['required']">Password required</mat-error>
+      </mat-form-field>
+      <mat-form-field >
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="password" formControlName="confirmpassword" />
+        <mat-error *ngIf="confirmpassword?.errors?.['required']">Confirm password required</mat-error>
+      </mat-form-field>
+      <mat-error *ngIf="signupform.errors?.['passwordsdontmatch']">Password Should Match</mat-error>
+          <div class="center margin-top">
+              <button class="loginbtn" mat-raised-button color="basic" type="submit">SignUp</button>
+              <span class="margin-top" style="text-align: center;">Already have an account?  <a routerLink="/login">Login</a></span>
+          </div>
+     
+    </form>
+  </div>

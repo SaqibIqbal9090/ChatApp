@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "chatapp9090": {
+      "hosting": {
+        "ChatApp": [
+          "chatapp9090"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "chatapp9090"
+  }
+}
