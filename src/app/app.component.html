@@ -1,14 +1,16 @@
 <mat-toolbar>
-  My App
-  <ng-container *ngIf="authservice.currentUser$ | async as user; else loginButton" >
-    <button mat-button routerLink="login" (click)="logout()">
-      <mat-icon>logout</mat-icon>
-      Logout
+  Chat App
+  <ng-container *ngIf="user$ | async as user; else loginButton"  >
+   
+    <button mat-button  [matMenuTriggerFor]="usermenu" style="height: fit-content; width: fit-content;">
+      <mat-icon>expand_more</mat-icon>
+      <img class="profile-image-toolbar" width="30" height="30" [src]="user.photoURL" >
+      {{user.displayName}}
     </button>
+   
   </ng-container>
 
-  <ng-template  #loginButton>
-         
+  <ng-template  #loginButton>     
     <button mat-button routerLink="login">
       <mat-icon>login</mat-icon>
          Login
@@ -19,3 +21,11 @@
 <div class="content">
 <router-outlet></router-outlet>
 </div>
+<mat-menu #usermenu="matMenu">
+  <button mat-menu-item (click)="logout()">
+    <mat-icon>logout</mat-icon>
+  Logout</button>
+  <button mat-menu-item routerLink="/profile">
+    <mat-icon>account_circle</mat-icon>
+  Profile</button>
+</mat-menu>

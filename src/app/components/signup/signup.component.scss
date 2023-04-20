@@ -7,3 +7,10 @@ a{
     font-weight: bold;
     color: rgb(101, 101, 94);
 }
+.row{
+    display: flex;
+    gap: 20px;
+}
+.form-container{
+    max-width: 400px;
+}

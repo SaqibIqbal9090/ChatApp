@@ -1,0 +1,26 @@
+.profile-img img{
+    position: relative;
+    border-radius:100% ;
+    object-fit: cover;
+    object-position: center;
+   
+}
+.edit-btn{
+    position: relative;
+    bottom: 40px;
+    left: 15%;
+
+}
+
+.form-container{
+    display: block;
+    max-width: 400px;
+    margin: auto;
+    background: #eceff1;
+    padding: 48px;
+
+}
+.row{
+    display: flex;
+    gap: 16px;
+}

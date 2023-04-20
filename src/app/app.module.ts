@@ -10,7 +10,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // mat
-import {MatMenuModule} from '@angular/material/menu';
+import {MatMenu, MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -24,7 +24,6 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { HotToastModule } from '@ngneat/hot-toast';
-
 @NgModule({
   declarations: [
     AppComponent,
